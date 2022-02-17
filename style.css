@@ -1,0 +1,106 @@
+.container {
+    background-color: #ccc;
+    height: 200px;
+    
+    display: flex;
+    /*Define um container como flex*/
+    
+    flex-direction: row;
+    /* 
+    Define o tipo da posição dos itens
+
+    row = valor padrão | 
+    column = define os itens como coluna | 
+    row-reverse = define os itens em linha reversa | 
+    column reverse = faz coluna reversa 
+    */
+
+    flex-wrap: nowrap;
+    /*
+    Define se os itens terão quebra de linhas
+    
+    nowrap = valor padrão, não permite quebra de linha |
+    wrap = quebra de linha | 
+    wrap-reverse = quebra de linha reversa
+    */
+   
+    flex-flow: row nowrap;
+    /* flexdirection + nowrap */
+
+    justify-content: flex-start;
+    /*
+    Define o alinhamento na horizontal
+    
+    flex-start = valor padrão, da esquerda pra direita |
+    flex-end = da direita pra esquerda |
+    center = no centro |
+    space-between = cria um espaçamento entre os itens |
+    space-around = cria um espaçamento entre os itens, até nas bordas
+    */
+
+    align-items: stretch;
+    /* 
+    Define o alinhamento dos itens na vertical
+
+    stretch = valor padrão, faz os itens crescerem igualmente |
+    flex-start = alinha os itens no topo |
+    flex-end = alinha os itens na base |
+    center = alinha os itens no centro |
+    baseline = alinhamento vertical baseado no conteúdo de cada item 
+    */
+
+    align-content: flex-start;
+    /* 
+    Faz um alinhamento vertical quando os elementos tiverem em multiline (uma quebra)
+    
+    stretch = valor padrão, faz os itens crescerem igualmente |
+    flex-start = alinha os itens no topo da vertical |
+    flex-end = alinha os itens na base da vertical |
+    center = alinha no centro |
+    space-between = adiciona um espaçamento entre os itens |
+    space-around = adiciona o mesmo espaçamento dos itens na borda 
+    */
+}
+
+.item {
+    background-color: #333;
+    /* Cor de fundo */
+    color: #fff;
+    /* Cor do item */
+    padding: 20px;
+    /* Espaçamento interno */
+    margin: 5px;
+    /* Margem entre os itens */
+    width: 30px;
+    /* Largura */
+    height: 30px;
+    /* Altura */
+    flex-grow: 1;
+    /* Define a largura do item */
+    flex-shrink: 1 ;
+    /* Capacidade de redução do item */ 
+    flex-basis: 300px;
+    /* Define a largura inicial do item */
+    flex: 1 1 300px;
+    /* Flex-groe + Flex-shrink + Flex-basis */
+}
+
+.article-01 {
+    background-color: red;
+    align-self: auto; 
+    /* Alinhamento dos itens
+    center | start | end | baseline | stretch | auto 
+    */
+}
+.article-02 {
+    background-color: green;
+    order: 03;
+    /* Altera a ordem do item */
+}
+.article-03 {
+    background-color: blue;
+    flex-shrink: 3;
+}
+.article-04 {
+    background-color: gold;   
+}
